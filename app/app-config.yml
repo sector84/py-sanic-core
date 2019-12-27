@@ -1,0 +1,13 @@
+storage_postgres:
+  host: postgres
+  port: 5432
+  user: postgres
+  password: postgres
+  dbname: rest_api
+
+storage_memcache:
+  host: memcached
+  port: 11211
+
+use_cache: 0
+debug_level: 5

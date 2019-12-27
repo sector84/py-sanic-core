@@ -1,0 +1,26 @@
+version: "3"
+services:
+  app:
+    image: "rest-api-mock:0.1.0"
+    ports:
+      - "8088:80"
+    restart: always
+    logging:
+      options:
+        max-size: "1024k"
+        max-file: "5"
+    volumes:
+      - ${PWD}/app/:/app
+#      - /home/sector/_personal/tests/:/test
+  postgres:
+    image: "postgres:10.3"
+    ports:
+      - "54321:5432"
+    restart: always
+    volumes:
+      - rest-app-pg-data:/var/lib/postgresql/data
+  memcached:
+    image: "memcached:alpine"
+    restart: always
+volumes:
+  rest-app-pg-data:
