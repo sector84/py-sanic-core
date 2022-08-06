@@ -1,4 +1,4 @@
-sanic==0.7.0
+sanic==20.12.7
 sanic_session==0.1.5
 Sanic-Auth==0.2.0
 pyyaml==3.12
